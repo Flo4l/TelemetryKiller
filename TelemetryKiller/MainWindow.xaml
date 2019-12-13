@@ -1,0 +1,47 @@
+﻿<Window x:Class="TelemetryKiller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TelemetryKiller"
+        mc:Ignorable="d"
+        Title="Telemetry Killer" Height="260" Width="410" Background="#424242" WindowStyle="None" AllowsTransparency="True" MouseDown="DragWindow" BorderThickness="1" BorderBrush="#002C6C" >
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="0" Content="Telemetry Killer" FontSize="24" FontFamily="bahnschrift" Foreground="#0059DD" Margin="15,5,0,0"/>
+        <Button Name="ExitButton" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Right" VerticalAlignment="Top" Content="X" Width="50" Height="30" Background="Red" BorderThickness="0" Click="Exit"/>
+        
+        <CheckBox Name="BlockTelemetry" Grid.Row="2"  Content="Disable Telemetry" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        <CheckBox Name="DisableWebsearch" Grid.Row="3" Content="Disable Web Search" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        <CheckBox Name="DisableCortana" Grid.Row="4" Content="Disable Cortana" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        <CheckBox Name="DisableSystemAds" Grid.Row="5" Content="Disable System Ads" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        <CheckBox Name="DisableOneDrive" Grid.Row="2" Grid.Column="1" Content="Disable OneDrive" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        <CheckBox Name="DisableWifiShare" Grid.Row="3" Grid.Column="1" Content="Disable WiFi Sharing" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        <CheckBox Name="DisableGeolocation" Grid.Row="4" Grid.Column="1" Content="Disable Geolocation" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        <CheckBox Name="DisableAccountSync" Grid.Row="5" Grid.Column="1" Content="Disable Account Sync" FontFamily="bahnschrift" FontSize="16" Margin="15,0,0,0" Foreground="#0059DD"/>
+        
+        <Button Name="Button" Grid.Row="7" Grid.ColumnSpan="3" Content="Stop Spyin!" Width="100" FontFamily="bahnschrift" FontSize="14" Background="#2B2A2B" Foreground="#0059DD" BorderBrush="#002C6C" Click="StartPatch"/>
+        <Label Name="Log" Grid.Row="8" Grid.ColumnSpan="3" Content="Info" FontFamily="bahnschrift" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#0059DD"/>
+
+    </Grid>
+    
+</Window>
